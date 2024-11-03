@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="dbbf7367-74e6-4012-96cd-a3682c63fe2f">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT employee.Firstname,employee.MI,employee.Lastname,salary.Salary,salary.OT,salary.Philhealth,salary.tax,salary.SSS,salary.Net,paydates.StartDate,paydates.CutOffDate FROM salary,employee,paydates WHERE salary.empno=employee.empno AND paydates.TransactionID=salary.TransactionID AND salary.status='paid' ;]]>
+	</queryString>
+	<field name="Firstname" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="MI" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Lastname" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Salary" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="OT" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Philhealth" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tax" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="SSS" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Net" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="StartDate" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="CutOffDate" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="283" y="12" width="175" height="28" uuid="31d38c4c-0d27-4912-9e52-b9d768d2f044"/>
+				<textElement>
+					<font fontName="Times New Roman" size="24" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Salary Report]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="606" y="12" width="125" height="20" uuid="2f468280-e19d-4aac-bacb-17936928c1a7"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{StartDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="606" y="40" width="125" height="20" uuid="ebdb05cd-bd64-457d-8554-2a592126a835"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CutOffDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="506" y="12" width="84" height="20" uuid="a3b1c396-3473-45f6-ab9f-3687940a9a19"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Start date:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="506" y="40" width="84" height="20" uuid="ce32caa3-6790-450d-b439-3ac3875f149d"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Cut-off date:]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="44" y="59" width="205" height="20" uuid="02c4d971-847f-4b91-b5f4-e4f1f5a78038"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="23" y="12" width="80" height="20" uuid="61af2f58-fbf0-4450-889d-574ff6aa3323"/>
+				<textElement textAlignment="Right">
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="103" y="12" width="40" height="20" uuid="4fc53dec-c7c7-486d-a89f-116eab5be63d"/>
+				<textElement>
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="2" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="48" splitType="Stretch">
+			<staticText>
+				<reportElement x="23" y="6" width="63" height="20" uuid="a330c909-eb8e-4c62-b62a-2dae15768e52"/>
+				<text><![CDATA[Firstname]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="102" y="6" width="42" height="20" uuid="f396c278-5192-4563-9dfd-264ace1aa0c4"/>
+				<text><![CDATA[MI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="6" width="68" height="20" uuid="3b335231-b265-47cf-b6d0-5f6bfcbc9e24"/>
+				<text><![CDATA[Lastname]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="249" y="6" width="68" height="20" uuid="5f9f694d-a0e5-4ccf-8f70-6554cebc7836"/>
+				<text><![CDATA[Salary]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="345" y="6" width="61" height="20" uuid="1b586ebf-0beb-4218-b6a5-4d258cb56c4a"/>
+				<text><![CDATA[OT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="419" y="6" width="100" height="20" uuid="b4043e6a-7875-4cc0-a37f-0e7c3e43cf8a"/>
+				<text><![CDATA[Philhealth]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="544" y="6" width="46" height="20" uuid="e958d014-9cdd-4e61-bf8b-86eab6123666"/>
+				<text><![CDATA[tax]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="606" y="6" width="34" height="20" uuid="fd0d398f-cd2a-44f3-a32e-604d7e6f40a1"/>
+				<text><![CDATA[SSS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="662" y="6" width="56" height="20" uuid="00ddf34f-cb36-4f1f-b38e-42096151a4ea"/>
+				<text><![CDATA[Net]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="85" splitType="Stretch">
+			<textField>
+				<reportElement x="23" y="11" width="63" height="47" uuid="abf10fc0-26e1-4961-85e7-c4af848da133"/>
+				<textFieldExpression><![CDATA[$F{Firstname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="102" y="11" width="42" height="47" uuid="1ba8f7fe-4e1c-4a9d-9e92-2a0ed24c2888"/>
+				<textFieldExpression><![CDATA[$F{MI}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="11" width="68" height="47" uuid="86a95bf9-7cbd-4691-9b36-52665969607a"/>
+				<textFieldExpression><![CDATA[$F{Lastname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="249" y="11" width="68" height="47" uuid="2620343a-4242-4648-b6d7-82d07443dfe8"/>
+				<textFieldExpression><![CDATA[$F{Salary}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="345" y="11" width="61" height="47" uuid="54f2e2fc-8788-4197-b0a0-d84176a340b1"/>
+				<textFieldExpression><![CDATA[$F{OT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="419" y="11" width="100" height="47" uuid="6f24a014-6027-4de3-95b6-e4d59f5eca7a"/>
+				<textFieldExpression><![CDATA[$F{Philhealth}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="544" y="11" width="46" height="47" uuid="1cc4ce0f-9170-41f4-83da-8e43336f3f7e"/>
+				<textFieldExpression><![CDATA[$F{tax}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="606" y="11" width="34" height="47" uuid="d2711147-dabf-463e-bf69-a73efca37580"/>
+				<textFieldExpression><![CDATA[$F{SSS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="662" y="11" width="56" height="47" uuid="bd35a754-5766-4539-aa47-e469fa18e927"/>
+				<textFieldExpression><![CDATA[$F{Net}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="69" splitType="Stretch"/>
+	</summary>
+</jasperReport>

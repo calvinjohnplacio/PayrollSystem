@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6e003554-f37d-4823-b789-b457c2e46c53">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+*
+FROM
+employee]]>
+	</queryString>
+	<field name="empno" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="photo" class="java.lang.Object">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Firstname" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="MI" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Lastname" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Birthday" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Address" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Gender" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Department" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Position" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Dailypay" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Otpay" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="298" y="12" width="252" height="53" uuid="95a633a2-66cb-44b3-81ea-47ca0f795f33"/>
+				<textElement>
+					<font fontName="Times New Roman" size="24" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[LMN Hotel and Resort]]></text>
+			</staticText>
+			<image>
+				<reportElement x="182" y="0" width="96" height="75" uuid="02688b46-9824-4d95-b37b-e7f98ab585b9"/>
+				<imageExpression><![CDATA["C:\\Users\\calvin\\Pictures\\pics\\Staff.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="1" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="39" splitType="Stretch">
+			<staticText>
+				<reportElement x="82" y="19" width="72" height="20" forecolor="#660000" uuid="d3c29ffd-c8f4-41aa-9236-6aba4d81fbd2"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Firstname]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="154" y="19" width="72" height="20" forecolor="#663300" uuid="d2b1f6f2-a4bf-445a-8510-ef6881955da0"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="226" y="19" width="72" height="20" forecolor="#660000" uuid="d167c3ea-f2f9-400c-aeec-b6db3068045c"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lastname]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="298" y="19" width="72" height="20" forecolor="#660000" uuid="362441b0-b3d9-4598-a2f4-3102bd53f5f1"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Birthday]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="19" width="72" height="20" forecolor="#660000" uuid="9ad5efb3-c308-438a-b948-20cd2ed21f47"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="495" y="19" width="72" height="20" forecolor="#660000" uuid="b549135b-d30c-407f-bddb-c23ca312ed6e"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Gender]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="584" y="19" width="72" height="20" forecolor="#660000" uuid="521ced51-1d68-4005-a51e-d80ab31ff09a"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Position]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="656" y="19" width="72" height="20" forecolor="#660000" uuid="f0b5a712-9182-4ada-be82-8a6b725d76ed"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dailypay]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="728" y="19" width="72" height="20" forecolor="#660000" uuid="061f469f-c881-4554-94e9-0e8fa1c3ef6c"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Otpay]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="19" width="72" height="20" forecolor="#660000" uuid="01a9c5a4-7498-416a-888c-e6c046312d35"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[empno]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="67" splitType="Stretch">
+			<textField>
+				<reportElement x="82" y="33" width="72" height="20" forecolor="#660000" uuid="9cc117ac-47f0-4d7a-881a-b7de346463ff"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{Firstname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="154" y="33" width="72" height="20" forecolor="#663300" uuid="29a17441-cc55-4457-9234-2bd0702361d3"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{MI}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="226" y="33" width="72" height="20" forecolor="#660000" uuid="62b5e3a7-75fd-46ee-9f72-3e13104592f6"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{Lastname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="298" y="33" width="72" height="20" forecolor="#660000" uuid="3be5cbda-b141-4135-9b1c-d4529231317b"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{Birthday}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="370" y="21" width="112" height="42" forecolor="#660000" uuid="f76970a0-95ba-4030-a73d-ccb172bd8923"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{Address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="495" y="33" width="72" height="20" forecolor="#660000" uuid="e9656b82-0553-4d26-bae5-bbf11a74331d"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{Gender}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="584" y="33" width="72" height="20" forecolor="#660000" uuid="329bba05-ddad-4dd7-90bf-80337e0d831e"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{Position}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="656" y="33" width="72" height="20" forecolor="#660000" uuid="4d608e5f-e07d-4729-a0a1-e16a0bde3009"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{Dailypay}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="728" y="33" width="72" height="20" forecolor="#660000" uuid="a6e339be-ab4a-4a19-aa2e-6b65b169ff03"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{Otpay}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="33" width="72" height="20" forecolor="#660000" uuid="b8815b3e-7bb8-4987-849f-57cec3c4b394"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{empno}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="40" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="38" splitType="Stretch">
+			<textField>
+				<reportElement x="342" y="18" width="100" height="20" uuid="543387ff-4133-4406-b48c-bd27b1f038ee"/>
+				<textElement>
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEE, d MMM yyyy HH:mm:ss Z">
+				<reportElement x="584" y="0" width="198" height="20" uuid="6480ae98-4087-4d72-91a7-026a471dc4de"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

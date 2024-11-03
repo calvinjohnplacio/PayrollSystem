@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b2d02c3f-cf76-4802-bc69-70f0ab135b6c">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT employee.Firstname,employee.MI,employee.Lastname,employee.Department,employee.Position,comments.details,comments.type,comments.Issued FROM `comments`,employee WHERE comments.empno=employee.empno ]]>
+	</queryString>
+	<field name="Firstname" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="MI" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Lastname" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Department" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Position" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="details" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="type" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Issued" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="177" splitType="Stretch">
+			<staticText>
+				<reportElement x="152" y="17" width="305" height="34" uuid="e724fb7b-9e51-442a-a6b2-88a8a208b4a2"/>
+				<textElement>
+					<font size="16" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[LMN Employee Complain and requesting]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="18" y="61" width="149" height="21" uuid="f05b83d3-eecf-4e1b-8b4b-a028fb3b8f03"/>
+				<textElement>
+					<font size="12" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Complainant/Requesting:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="112" width="78" height="21" uuid="ad0ddf40-77e6-49ba-9d75-c7553f87104f"/>
+				<textElement>
+					<font size="12" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Department:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="144" width="56" height="21" uuid="c4ea6421-d5f0-4215-88a5-e829b9d64c96"/>
+				<textElement>
+					<font size="12" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Position:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="180" y="61" width="132" height="36" uuid="10a705bc-dd7e-4f8a-b060-80289d4122c2"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Firstname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="322" y="62" width="36" height="20" uuid="b2bf5cc5-7fd0-4607-be82-6146911d46e3"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{MI}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="372" y="62" width="170" height="35" uuid="edc3f0dc-4c4d-4434-9e05-93d9aa1131b5"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Lastname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="117" y="112" width="425" height="20" uuid="f664f306-2b34-4615-a068-a0d084385c07"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Department}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="117" y="145" width="425" height="20" uuid="be92c45b-bcc4-4919-9622-6f6dd7feb6e9"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Position}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="78" y="10" width="59" height="41" uuid="47455b39-3e7f-4830-a239-4d232479e357"/>
+				<imageExpression><![CDATA["C:\\Users\\calvin\\Pictures\\pics\\Emp.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="51" splitType="Stretch">
+			<staticText>
+				<reportElement x="22" y="15" width="56" height="21" uuid="fdf135d3-d948-4ec9-a208-9f3d2ee5e540"/>
+				<textElement>
+					<font size="12" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Purpose:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="117" y="16" width="268" height="20" uuid="45345a61-1962-441f-b756-b78bf7a12f25"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{type}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="260" splitType="Stretch">
+			<staticText>
+				<reportElement x="22" y="17" width="78" height="21" uuid="db7af2e3-5778-4860-880a-c272bb04b07f"/>
+				<textElement>
+					<font size="12" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Date-issued:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="62" width="56" height="21" uuid="fe6f2620-68c8-40d5-88e2-dce9bdb4d671"/>
+				<textElement>
+					<font size="12" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Details:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="117" y="17" width="359" height="20" uuid="e81ce713-4f9e-4fe3-a8f0-bd4e1375785b"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Issued}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="67" y="62" width="463" height="176" uuid="c660d14b-ab15-4a78-b685-80278068d409"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{details}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
